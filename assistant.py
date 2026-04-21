@@ -79,7 +79,6 @@ def ask_ai(prompt):
 def listen():
     recognizer = sr.Recognizer()
 
-    # 🎤 Better mic sensitivity
     recognizer.energy_threshold = 300
     recognizer.dynamic_energy_threshold = True
 
@@ -87,7 +86,7 @@ def listen():
     seconds = 5
 
     try:
-        print("🎤 Listening...")
+        print("Listening...")
 
         recording = sd.rec(int(seconds * fs), samplerate=fs, channels=1, dtype='int16')
         sd.wait()
@@ -97,10 +96,10 @@ def listen():
 
         audio_data = sr.AudioData(byte_io.getvalue(), fs, 2)
 
-        print("🔍 Recognizing...")
+        print("Recognizing...")
         query = recognizer.recognize_google(audio_data, language='en-in')
 
-        print(f"👤 You said: {query}")
+        print(f"You said: {query}")
         return query.lower()
 
     except sr.UnknownValueError:
