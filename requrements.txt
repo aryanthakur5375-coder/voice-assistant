@@ -1,0 +1,11 @@
+streamlit
+speechrecognition
+pyjokes
+wikipedia
+sounddevice
+numpy
+scipy
+edge-tts
+playsound==1.2.2
+openai
+python-dotenv
