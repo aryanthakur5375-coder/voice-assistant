@@ -29,7 +29,7 @@ st.title("AI Assistant")
 if "history" not in st.session_state:
     st.session_state.history = []
 
-if st.button("🎤 Speak"):
+if st.button("Speak"):
     with st.spinner("Listening..."):
         query = listen()
 

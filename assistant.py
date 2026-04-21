@@ -36,7 +36,6 @@ async def async_speak(text):
         await communicate.save(temp_file)
         playsound.playsound(temp_file)
 
-        # 🧹 delete file after playing
         os.remove(temp_file)
 
     except Exception as e:
